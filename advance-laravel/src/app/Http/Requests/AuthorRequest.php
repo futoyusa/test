@@ -13,7 +13,7 @@ class AuthorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -39,5 +39,11 @@ class AuthorRequest extends FormRequest
       'nationality.required' => '国籍を入力してください',
     ];
   }
+protected function getRedirectUrl()
+  {
+    return 'verror';
+  }
 }
+
+
 

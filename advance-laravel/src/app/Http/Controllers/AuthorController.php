@@ -14,7 +14,7 @@ class AuthorController extends Controller
     {
         $authors = Author::all();
         return view('index', ['authors' => $authors]);
-   }
+    }
 
    // データ追加用ページの表示
     public function add()
@@ -41,7 +41,7 @@ class AuthorController extends Controller
     {
         $form = $request->all();
         unset($form['_token']);
-        Author::find($request->id)->update($form);
+        Author::find($request->id=2)->update($form);
         return redirect('/');
     }
 
@@ -57,6 +57,10 @@ class AuthorController extends Controller
     {
         Author::find($request->id)->delete();
         return redirect('/');
+    }
+    public function verror()
+    {
+    return view('verror');
     }
 
 }
