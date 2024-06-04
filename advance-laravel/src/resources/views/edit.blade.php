@@ -42,7 +42,7 @@
         id
       </th>
       <td>
-        <input type="text" name="id=2" value="{{$form->id=2}}">
+        <input type="text" name="id" value="{{$form->id}}">
       </td>
     </tr>
     @error('name')
